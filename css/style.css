@@ -160,6 +160,24 @@ Collections section
     color: darkgrey;
 }
 
+
+/*...............may also
+..............  likes......................  */
+.likes{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+.likes .like img{
+    height: 200px;
+    width: 300px;
+}
+
+
+
 /* ....................................................
         Footer
 .............................*/
@@ -206,7 +224,10 @@ footer ul li .fab{
     background-image: linear-gradient(to right, rgb(133, 5, 90) , rgb(216, 22, 200));
 }
 
-
+.like img:hover{
+    opacity: .9;
+    cursor: pointer;
+}
 
 /* .....................................................
     Responsive
@@ -254,7 +275,7 @@ footer ul li .fab{
         width: 100%;
         margin: 30px 0px;
     }
-    .collections{
+    .collections,.likes{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -280,8 +301,9 @@ footer ul li .fab{
         padding: 0px 20px;
         align-items: center;
     }
-    .collections {
+    .collections,.likes {
         grid-template-columns: repeat(2,1fr);
     }
-    
+
+   
 }
