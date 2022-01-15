@@ -1,3 +1,4 @@
+/* .......google fonts......... */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 
 body{
@@ -7,6 +8,10 @@ body{
     padding: 0%;
 }
 
+/* ....................
+    common style
+    ...................
+*/
 .text-center{
     text-align: center;
 }
@@ -14,15 +19,6 @@ h1{
     font-size: 40px;
 }
 
-hr{
-    border-radius: 100%;
-}
-#horizontal-1{
-    border: 1px solid lightgrey;
-}
-#horizontal-2{
-    border: 2px solid lightgrey;
-}
 p{
     font-size: 12px;
     font-weight: 700;
@@ -48,6 +44,10 @@ main{
     margin: 40px 50px 80px;
     border-radius: 5px;
 }
+/* ................................................
+        Navigation
+...................................
+*/
 nav{
     display: flex;
     justify-content: space-between;
@@ -77,26 +77,9 @@ nav>ul>li a{
     text-decoration: none;
     color: black;
 }
-@media (max-width: 688px) {
-    nav{
-        padding: 10px 15px;
-    }
-    nav .toggle-icon, nav .cart-icon{
-        display: block;
-    }
-    
-    nav>ul{
-        display: none;
-        flex-direction: column;
-        align-items:flex-start;
-        justify-content: center;
-    }
-}
 
+/* influencer section ......................................*/
 .influencer{
-    /* display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-column-gap: 88px; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -104,43 +87,35 @@ nav>ul>li a{
 .influencer .start,.influencer-photo{
     width: 50%;
 }
+
 .influencer-photo img{
     width: 60%;
     margin-left: 30%;
 }
+/* ....................................
+        icon section
+*/
 .icons{
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-@media (max-width: 688px) {
-    .influencer{
-     flex-direction: column-reverse;
-        align-items:center;
-        justify-content: center;
 
-    }
-    .influencer .start,.influencer-photo{
-        width: 100%;
-    }
-    .influencer-photo img{
-        width: 60%;
-        margin-left: 20%;
-    }
-    .start{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    .start h1{
-        text-align: center;
-    }
-
-   
+hr{
+    border-radius: 100%;
+}
+#horizontal-1{
+    border: 1px solid lightgrey;
+}
+#horizontal-2{
+    border: 2px solid lightgrey;
 }
 
 
+
+/*....................................
+Collections section 
+................*/
 
 #collection-section .see-more{
     float: right;
@@ -182,10 +157,12 @@ nav>ul>li a{
     margin-left: 5px;
 }
 .collection p{
-    color: lightgray;
+    color: darkgrey;
 }
 
-
+/* ....................................................
+        Footer
+.............................*/
 
 footer{
     display: flex;
@@ -215,11 +192,64 @@ footer ul li .fab{
     top: 11px;
     left: 11px;
 }
+ 
+/*.........................................................
+    Animation
+................... */
+
+.influencer-photo img:hover{
+    transform: scale(1.1);
+    transition: 1s;
+    cursor: pointer;
+}
+.influencer .link-btn:hover{
+    background-image: linear-gradient(to right, rgb(133, 5, 90) , rgb(216, 22, 200));
+}
 
 
 
+/* .....................................................
+    Responsive
+.......................... */
 
-@media (max-width:688px) {
+@media (max-width: 688px) {
+    nav{
+        padding: 10px 15px;
+    }
+    nav .toggle-icon, nav .cart-icon{
+        display: block;
+    }
+    
+    nav>ul{
+        display: none;
+        flex-direction: column;
+        align-items:flex-start;
+        justify-content: center;
+    }
+
+    .influencer{
+        flex-direction: column-reverse;
+           align-items:center;
+           justify-content: center;
+   
+       }
+       .influencer .start,.influencer-photo{
+           width: 100%;
+       }
+       .influencer-photo img{
+           width: 60%;
+           margin-left: 20%;
+       }
+       .start{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: center;
+       }
+       .start h1{
+           text-align: center;
+       }
+
     .container{
         width: 100%;
         margin: 30px 0px;
@@ -232,8 +262,26 @@ footer ul li .fab{
      .icons{
          display: grid;
          grid-template-columns: repeat(4,1fr);
-        
          font-size: 20px;
      }
-}
 
+
+}
+/* 
+................................................................
+    tablet view
+......................... */
+@media (min-width:669px) and (max-width: 991px){
+    .container{
+        width: 100%;
+        margin: 30px 0px;
+    }
+    .influencer{
+        padding: 0px 20px;
+        align-items: center;
+    }
+    .collections {
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+}
